@@ -3,7 +3,8 @@ $(document).ready(function() {
   console.log("Load Page");
 
   var emotions = [
-    "anger", "mildness", "love", "fear", "confidence",
+    "Anger", "Mildness", "Love", "Enmity", "Fear", "Confidence", "Shame", 
+    "Shamelessness", "Pity", "Indignation", "Envy", "Contempt"
   ];
 
   //Add buttons and empty buttons area everytime 
@@ -25,10 +26,9 @@ $(document).ready(function() {
     $("#emotions").empty();
     $(".emotion-button").removeClass("active");
     $(this).addClass("active");
-    console.log(this);
 
     var type = $(this).attr("data-type");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=8PBlJOoZGwkxo2lmVrNqjxdyxiX9184X&limit=10++";
 
     $.ajax({
         url: queryURL,

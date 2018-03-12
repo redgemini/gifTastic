@@ -28,13 +28,13 @@ $(document).ready(function() {
     $(this).addClass("active");
 
     var type = $(this).attr("data-type");
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=8PBlJOoZGwkxo2lmVrNqjxdyxiX9184X&limit=10++";
-
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=8PBlJOoZGwkxo2lmVrNqjxdyxiX9184X&&limit=10";
+     console.log(queryURL);
     $.ajax({
         url: queryURL,
         method: "GET"
       })
-
+     
     .then(function(response) {
        console.log(response);
       var results = response.data;
